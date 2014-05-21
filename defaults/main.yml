@@ -1,0 +1,19 @@
+---
+
+notify_enabled: yes
+notify_message: "[{{inventory_hostname}}] has been updated by {{ansible_ssh_user}} on {{ansible_date_time.iso8601}}"
+
+notify_mail_to: ""
+notify_mail_cc: ""
+notify_mail_from: ansible@{{inventory_hostname}}
+notify_mail_host: localhost
+notify_mail_port: 25
+notify_mail_attach: ""
+
+notify_jabber_to: ""
+notify_jabber_user: ""
+notify_jabber_host: ""
+notify_jabber_port: 5223
+notify_jabber_password: ""
+
+# notify_body: ""

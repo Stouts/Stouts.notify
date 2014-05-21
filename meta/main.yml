@@ -1,0 +1,13 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: klen
+  company: Stouts
+  description: Send email (jabber) notification when configure nodes
+  license: MIT
+  categories:
+  - system
+  - development
+
