@@ -47,6 +47,7 @@ Example:
 
     # Setup notify
     notify_mail_to: myemal@gmail.com
+    notify_mail_attach: /path/to/changelog
 
 ```
 
