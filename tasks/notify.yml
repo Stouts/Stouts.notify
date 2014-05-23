@@ -1,7 +1,7 @@
 ---
 
 - name: Get output from shell for email body
-  shell: notify_mail_shell
+  shell: {{notify_mail_shell}}
   register: notify_shell
   when: notify_mail_shell != ""
 
