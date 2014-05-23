@@ -9,6 +9,7 @@ notify_mail_from: ansible@{{inventory_hostname}}
 notify_mail_host: localhost
 notify_mail_port: 25
 notify_mail_attach: ""
+notify_mail_shell: ""                                         # Copy output from shell command as message body
 
 notify_jabber_to: ""
 notify_jabber_user: ""
