@@ -12,7 +12,7 @@
     port="{{notify_mail_port}}"
     subject="{{notify_message}}"
     from="{{notify_mail_from}}"
-    body="{{notify_shell.stdout|default(notify_message)}}"
+    body="{{notify_shell.stdout|default(notify_message)|escape}}"
     cc="{{notify_mail_cc}}"
     attach="{{notify_mail_attach}}"
     charset=utf8
