@@ -2,8 +2,7 @@ Stouts.notify
 =============
 
 [![Build Status](http://img.shields.io/travis/Stouts/Stouts.notify.svg?style=flat-square)](https://travis-ci.org/Stouts/Stouts.notify)
-[![Galaxy](http://img.shields.io/badge/galaxy-Stouts.notify-blue.svg?style=flat-square)](https://galaxy.notify.com/list#/roles/919)
-[![Tag](http://img.shields.io/github/tag/Stouts/Stouts.notify.svg?style=flat-square)]()
+[![Galaxy](http://img.shields.io/badge/galaxy-Stouts.notify-blue.svg?style=flat-square)](https://galaxy.ansible.com/list#/roles/919)
 
 Ansible role wich send email (jabber) notification when configure nodes
 
