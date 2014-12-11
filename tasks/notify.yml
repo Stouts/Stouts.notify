@@ -27,3 +27,14 @@
       port="{{notify_jabber_port}}"
       msg="{{notify_message}}"
   when: notify_jabber_to != ""
+
+- set_fact:
+    notify_slack_payload:
+      text: "{{notify_message}}" 
+      username: "{{notify_slack_username}}"
+      icon_emoji: "{{notify_slack_icon}}"
+      channel: "{{notify_slack_channel}}"
+
+- name: Send Slack notify
+  uri: HEADER_Content-Type='application/json' body='{{notify_slack_payload|to_nice_json}}' method='POST' url='{{notify_slack_webhook}}'
+  when: notify_slack_webhook != ""
