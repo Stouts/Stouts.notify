@@ -5,7 +5,7 @@ dependencies: []
 galaxy_info:
   author: klen
   company: Stouts
-  description: Send email (jabber) notification when configure nodes
+  description: Send email (jabber, slack) notification when provision are going
   license: MIT
   categories:
   - system

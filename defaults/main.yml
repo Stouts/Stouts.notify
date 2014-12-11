@@ -17,4 +17,9 @@ notify_jabber_host: ""
 notify_jabber_port: 5223
 notify_jabber_password: ""
 
+notify_slack_webhook: 
+notify_slack_username: ansible
+notify_slack_icon: ":rocket:"
+notify_slack_channel:
+
 # notify_body: ""

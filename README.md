@@ -4,7 +4,7 @@ Stouts.notify
 [![Build Status](http://img.shields.io/travis/Stouts/Stouts.notify.svg?style=flat-square)](https://travis-ci.org/Stouts/Stouts.notify)
 [![Galaxy](http://img.shields.io/badge/galaxy-Stouts.notify-blue.svg?style=flat-square)](https://galaxy.ansible.com/list#/roles/919)
 
-Ansible role wich send email (jabber) notification when configure nodes
+Ansible role which provides an email (jabber, slack) notifications
 
 #### Variables
 
@@ -25,6 +25,11 @@ notify_jabber_user: ""
 notify_jabber_host: ""
 notify_jabber_port: 5223
 notify_jabber_password: ""
+
+notify_slack_webhook: 
+notify_slack_username: ansible
+notify_slack_icon: ":rocket:"
+notify_slack_channel:
 ```
 
 #### Usage
@@ -38,8 +43,8 @@ Example:
 - hosts: all
 
   roles:
-    - Stouts.postfix
-    - Stouts.notify
+  - Stouts.postfix
+  - Stouts.notify
 
   vars:
 
