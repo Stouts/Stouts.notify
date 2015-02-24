@@ -1,0 +1,18 @@
+---
+
+- name: Get output from shell for email body
+  shell: "{{notify_mail_shell}}"
+  register: notify_shell
+  when: notify_mail_shell != ""
+
+- name: Send email notify
+  mail:
+    to="{{notify_mail_to}}"
+    host="{{notify_mail_host}}"
+    port="{{notify_mail_port}}"
+    subject="{{notify_message}}"
+    from="{{notify_mail_from}}"
+    body="{{notify_shell.stdout|default(notify_message)|escape}}"
+    cc="{{notify_mail_cc}}"
+    attach="{{notify_mail_attach}}"
+    charset=utf8

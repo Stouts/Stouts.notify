@@ -1,40 +1,14 @@
 ---
 
-- name: Get output from shell for email body
-  shell: "{{notify_mail_shell}}"
-  register: notify_shell
-  when: notify_mail_shell != ""
-
-- name: Send email notify
-  mail:
-    to="{{notify_mail_to}}"
-    host="{{notify_mail_host}}"
-    port="{{notify_mail_port}}"
-    subject="{{notify_message}}"
-    from="{{notify_mail_from}}"
-    body="{{notify_shell.stdout|default(notify_message)|escape}}"
-    cc="{{notify_mail_cc}}"
-    attach="{{notify_mail_attach}}"
-    charset=utf8
+- include: mail.yml
   when: notify_mail_to != ""
+  tags: [notify]
 
-- name: Send jabber notify
-  jabber:
-      to="{{notify_jabber_to}}"
-      user="{{notify_jabber_user}}"
-      password="{{notify_jabber_password}}"
-      host="{{notify_jabber_host}}"
-      port="{{notify_jabber_port}}"
-      msg="{{notify_message}}"
+- include: jabber.yml
   when: notify_jabber_to != ""
+  tags: [notify]
 
-- set_fact:
-    notify_slack_payload:
-      text: "{{notify_message}}" 
-      username: "{{notify_slack_username}}"
-      icon_emoji: "{{notify_slack_icon}}"
-      channel: "{{notify_slack_channel}}"
-
-- name: Send Slack notify
-  uri: HEADER_Content-Type='application/json' body='{{notify_slack_payload|to_nice_json}}' method='POST' url='{{notify_slack_webhook}}'
+- include: slack.yml
   when: notify_slack_webhook != ""
+  tags: [notify]
+
