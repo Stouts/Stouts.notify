@@ -21,5 +21,6 @@ notify_slack_webhook: ""
 notify_slack_username: ansible
 notify_slack_icon: ":rocket:"
 notify_slack_channel:
+notify_slack_shell: ""                                         # Copy output from shell command as message body
 
 # notify_body: ""

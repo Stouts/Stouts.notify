@@ -1,0 +1,10 @@
+---
+
+- name: Send jabber notify
+  jabber:
+      to="{{notify_jabber_to}}"
+      user="{{notify_jabber_user}}"
+      password="{{notify_jabber_password}}"
+      host="{{notify_jabber_host}}"
+      port="{{notify_jabber_port}}"
+      msg="{{notify_message}}"
