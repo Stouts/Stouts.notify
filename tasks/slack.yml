@@ -7,7 +7,7 @@
 
 - set_fact:
     notify_slack_payload:
-      text: "{{notify_message}}\n{{notify_slack_output.stdout|default('')}}" 
+      text: "{{notify_message}}\n{{notify_slack_output.stdout|default('')|escape}}" 
       username: "{{notify_slack_username}}"
       icon_emoji: "{{notify_slack_icon}}"
       channel: "{{notify_slack_channel}}"
