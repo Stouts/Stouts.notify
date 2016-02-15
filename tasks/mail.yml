@@ -8,6 +8,8 @@
 - name: Send email notify
   mail:
     to="{{notify_mail_to}}"
+    username="{{notify_mail_username}}"
+    password="{{notify_mail_password}}"
     host="{{notify_mail_host}}"
     port="{{notify_mail_port}}"
     subject="{{notify_message}}"
