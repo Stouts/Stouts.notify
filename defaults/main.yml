@@ -1,7 +1,7 @@
 ---
 
 notify_enabled: yes
-notify_message: "[{{inventory_hostname}}] has been updated by {{ansible_ssh_user}} on {{ansible_date_time.iso8601}}"
+notify_message: "[{{inventory_hostname}}] has been updated by {{ansible_user_id|default(ansible_ssh_user)}} on {{ansible_date_time.iso8601}}"
 
 notify_mail_to: ""
 notify_mail_cc: ""
