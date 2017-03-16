@@ -16,3 +16,4 @@
     cc="{{notify_mail_cc}}"
     attach="{{notify_mail_attach}}"
     charset=utf8
+  when: notify_mail_to != ""
