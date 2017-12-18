@@ -1,14 +1,14 @@
 ---
 
-- include: mail.yml
+- import_tasks: mail.yml
   when: notify_mail_to != ""
   tags: [notify]
 
-- include: jabber.yml
+- import_tasks: jabber.yml
   when: notify_jabber_to != ""
   tags: [notify]
 
-- include: slack.yml
+- import_tasks: slack.yml
   when: notify_slack_webhook != ""
   tags: [notify]
 

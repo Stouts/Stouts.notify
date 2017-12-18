@@ -1,5 +1,5 @@
 ---
 
-- include: notify.yml
+- import_tasks: notify.yml
   when: notify_enabled
   tags: [notify]
