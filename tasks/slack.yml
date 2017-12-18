@@ -13,6 +13,10 @@
       channel: "{{notify_slack_channel}}"
 
 - name: Send Slack notify
-  uri: HEADER_Content-Type='application/json' body='{{notify_slack_payload|to_nice_json}}' method='POST' url='{{notify_slack_webhook}}'
+  uri:
+    url: "{{notify_slack_webhook}}"
+    body_format: json
+    body: "{{notify_slack_payload}}"
+    method: POST
   when: notify_slack_webhook != ""
 
