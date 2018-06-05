@@ -6,6 +6,8 @@ notify_message: "[{{inventory_hostname}}] has been updated by {{ansible_user_id|
 notify_mail_to: ""
 notify_mail_cc: ""
 notify_mail_from: ansible@{{inventory_hostname}}
+notify_mail_username: ""
+notify_mail_password: ""
 notify_mail_host: localhost
 notify_mail_port: 25
 notify_mail_attach: ""
