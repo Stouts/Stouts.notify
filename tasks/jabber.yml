@@ -1,7 +1,7 @@
 ---
 
 - name: Send jabber notify
-  jabber:
+  community.general.jabber:
       to="{{notify_jabber_to}}"
       user="{{notify_jabber_user}}"
       password="{{notify_jabber_password}}"
