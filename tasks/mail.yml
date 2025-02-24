@@ -6,7 +6,7 @@
   when: notify_mail_shell != ""
 
 - name: Send email notify
-  mail:
+  community.general.mail:
     to="{{notify_mail_to}}"
     host="{{notify_mail_host}}"
     port="{{notify_mail_port}}"
